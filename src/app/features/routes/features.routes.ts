@@ -1,0 +1,71 @@
+import { Routes } from "@angular/router";
+import { HomeComponent } from "../home/home.component/home.component";
+
+export const FEATURES_ROUTES:Routes=[
+  {
+    path:"",
+    component:HomeComponent,
+    children:[
+      {
+        path:"dashboard",
+        loadComponent:()=>import("../dashboard/dashboard.component").then((m)=>m.DashboardComponent)
+      },
+      {
+        path:"client",
+        children:[
+          {path:"list",
+            loadComponent:()=>import("../clients/components/client-list.component/client-list.component").then((m)=>m.ClientListComponent)
+          },
+          {path:"detail",
+            loadComponent:()=>import("../clients/components/client-detail.component/client-detail.component").then((m)=>m.ClientDetailComponent)
+          },
+           {path:"detail/:id",
+            loadComponent:()=>import("../clients/components/client-detail.component/client-detail.component").then((m)=>m.ClientDetailComponent)
+          },
+{path:"",
+        redirectTo:"list",
+        pathMatch:"full"
+      }
+        ]
+      },
+       {
+        path:"product",
+        children:[
+          {path:"list",
+            loadComponent:()=>import("../products/components/products-list.component/products-list.component").then((m)=>m.ProductsListComponent)
+          },
+          {path:"detail",
+            loadComponent:()=>import("../products/components/products-detail.component/products-detail.component").then((m)=>m.ProductsDetailComponent)
+          },
+            {path:"detail/:id",
+            loadComponent:()=>import("../products/components/products-detail.component/products-detail.component").then((m)=>m.ProductsDetailComponent)
+          },
+{path:"",
+        redirectTo:"list",
+        pathMatch:"full"
+      }
+        ]
+      },
+{
+        path:"sales",
+        children:[
+          {path:"list",
+            loadComponent:()=>import("../sales/components/sales-list.component/sales-list.component").then((m)=>m.SalesListComponent)
+          },
+        
+{path:"",
+        redirectTo:"list",
+        pathMatch:"full"
+      }
+        ]
+      },
+        {path:"employee",
+        loadComponent:()=>import("../employees/components/employees.component/employees.component").then((m)=>m.EmployeesComponent)
+      },
+      {path:"",
+        redirectTo:"dashboard",
+        pathMatch:"full"
+      }
+    ]
+  }
+]

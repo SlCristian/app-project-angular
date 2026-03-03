@@ -1,0 +1,108 @@
+<p>products-detail.component works!</p>
+<div class="container mt-5">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-body p-4">
+
+      <h3 class="text-center mb-4 fw-bold text-primary">
+        {{ id ? 'Editar Producto' : 'Nuevo Producto' }}
+      </h3>
+
+      <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+        <!-- Nombre del Producto -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Nombre del Producto</label>
+          <input type="text" formControlName="product" class="form-control" placeholder="Ingrese el nombre del producto"
+            [ngClass]="{'is-invalid': cf['product'].invalid && (cf['product'].touched || submitted)}" />
+
+          @if (cf['product'].hasError('required')) {
+          <div class="invalid-feedback">El nombre es obligatorio.</div>
+          }
+          @if (cf['product'].hasError('minlength')) {
+          <div class="invalid-feedback">
+            Debe tener mínimo {{ cf['product'].errors?.['minlength']?.requiredLength }} caracteres.
+          </div>
+          }
+          @if (cf['product'].hasError('maxlength')) {
+          <div class="invalid-feedback">
+            Máximo {{ cf['product'].errors?.['maxlength']?.requiredLength }} caracteres.
+          </div>
+          }
+          @if (cf['product'].hasError('pattern')) {
+          <div class="invalid-feedback">
+            Solo se permiten letras, números y espacios.
+          </div>
+          }
+        </div>
+
+        <!-- Precio y Stock -->
+        <div class="row">
+          <!-- Precio -->
+          <div class="col-md-6 mb-3">
+            <label class="form-label fw-semibold">Precio</label>
+            <input type="number" step="0.01" formControlName="price" class="form-control" placeholder="0.00"
+              [ngClass]="{'is-invalid': cf['price'].invalid && (cf['price'].touched || submitted)}" />
+
+            @if (cf['price'].hasError('required')) {
+            <div class="invalid-feedback">El precio es obligatorio.</div>
+            }
+            @if (cf['price'].hasError('min')) {
+            <div class="invalid-feedback">El precio debe ser mayor a 0.</div>
+            }
+            @if (cf['price'].hasError('pattern')) {
+            <div class="invalid-feedback">Máximo 2 decimales permitidos.</div>
+            }
+          </div>
+
+          <!-- Stock -->
+          <div class="col-md-6 mb-3">
+            <label class="form-label fw-semibold">Stock</label>
+            <input type="number" formControlName="stock" class="form-control" placeholder="Cantidad disponible"
+              [ngClass]="{'is-invalid': cf['stock'].invalid && (cf['stock'].touched || submitted)}" />
+
+            @if (cf['stock'].hasError('required')) {
+            <div class="invalid-feedback">El stock es obligatorio.</div>
+            }
+            @if (cf['stock'].hasError('min')) {
+            <div class="invalid-feedback">No puede ser negativo.</div>
+            }
+            @if (cf['stock'].hasError('max')) {
+            <div class="invalid-feedback">Stock demasiado alto.</div>
+            }
+            @if (cf['stock'].hasError('pattern')) {
+            <div class="invalid-feedback">Solo números enteros.</div>
+            }
+          </div>
+        </div>
+
+        <!-- Estado Activo -->
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" formControlName="active"
+            [ngClass]="{'is-invalid': cf['active'].invalid && (cf['active'].touched || submitted)}" />
+          <label class="form-check-label fw-semibold">
+            Producto Activo
+          </label>
+
+          @if (cf['active'].hasError('requiredTrue')) {
+          <div class="invalid-feedback d-block">
+            Debe marcar el producto como activo.
+          </div>
+          }
+        </div>
+
+        <!-- Botones -->
+        <div class="d-flex justify-content-end gap-2 mt-4">
+          <button type="button" class="btn btn-outline-secondary px-4" (click)="cancelar()">
+            Cancelar
+          </button>
+
+          <button type="submit" class="btn btn-primary px-4">
+            {{ id ? 'Actualizar' : 'Guardar' }}
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

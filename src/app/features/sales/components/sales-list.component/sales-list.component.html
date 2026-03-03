@@ -1,0 +1,97 @@
+<p class="p-paragraph">Lista de ventas registradas</p>
+<hr>
+
+<div class="contenedor">
+  <form class="form-contenedor" [formGroup]="formFilterData">
+
+    <!-- 🔎 FILTRO GENERAL -->
+    <div class="content row div-contenedor">
+      <div class="col-sm-2">
+        <label for="search">Buscar venta: </label>
+      </div>
+
+      <div class="col-sm-10">
+        <div class="position-relative">
+          <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+          <input type="search" class="form-control ps-5" placeholder="Buscar por cliente, empleado o producto..."
+            id="search" formControlName="dato" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row pt-4 g-3">
+
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-primary w-100" (click)="getfilterSale()">
+          <i class="bi bi-binoculars"></i> Buscar
+        </button>
+      </div>
+
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-warning w-100" (click)="loadData()">
+          <i class="bi bi-arrow-clockwise"></i> Recargar
+        </button>
+      </div>
+
+      <div class="col-sm-4">
+        <button type="button" class="btn btn-secondary w-100" (click)="formFilterData.reset(); getfilterSale()">
+          <i class="bi bi-trash"></i> Limpiar
+        </button>
+      </div>
+
+    </div>
+  </form>
+
+
+  <table class="table table-striped mt-4">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Cliente</th>
+        <th>Empleado</th>
+        <th>Fecha</th>
+        <th>Productos</th>
+        <th>Total</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (dato of saleItemPage; track dato.id) {
+      <tr>
+        <td>{{$index + 1}}</td>
+        <td>{{dato.clientName}}</td>
+        <td>{{dato.employeeName}}</td>
+        <td>{{dato.fecha}}</td>
+        <td>
+          @for(p of dato.productNames; track p;let last = $last ){
+          {{p}}{{last ? ', ' : ''}}
+
+          }
+
+        </td>
+        <td>{{dato.total |currency }}</td>
+
+        <td>
+          <button type="button" class="btn btn-success me-2" title="Modificar" >
+            <i class="bi bi-pen"></i>
+          </button>
+
+          <button type="button" class="btn btn-danger me-2" (click)="eliminar(dato.id!)" title="Eliminar">
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+
+
+  <div class="row">
+    <div class="col-12">
+      <pagination [totalItems]="filteredSales.length" [itemsPerPage]="itemsPerPage" (pageChanged)="pageChanged($event)">
+      </pagination>
+    </div>
+  </div>
+</div>

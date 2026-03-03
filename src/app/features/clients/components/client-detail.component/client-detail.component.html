@@ -1,0 +1,117 @@
+<div class="container mt-5">
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-body p-4">
+
+      <h3 class="text-center mb-4 fw-bold text-primary">
+        {{ id ? 'Editar Cliente' : 'Nuevo Cliente' }}
+      </h3>
+
+      <form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+
+        <!-- Nombre -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Nombre Completo</label>
+          <input type="text" formControlName="client" class="form-control" placeholder="Ingrese el nombre del cliente"
+            [ngClass]="{'is-invalid': cf['client'].invalid && (cf['client'].touched || submitted)}" />
+
+          @if (cf['client'].hasError('required')) {
+          <div class="invalid-feedback">El nombre es obligatorio.</div>
+          }
+          @if (cf['client'].hasError('minlength')) {
+          <div class="invalid-feedback">
+            Debe tener mínimo {{ cf['client'].errors?.['minlength']?.requiredLength }} caracteres.
+          </div>
+          }
+          @if (cf['client'].hasError('maxlength')) {
+          <div class="invalid-feedback">
+            Máximo {{ cf['client'].errors?.['maxlength']?.requiredLength }} caracteres.
+          </div>
+          }
+          @if (cf['client'].hasError('pattern')) {
+          <div class="invalid-feedback">
+            Solo se permiten letras y espacios.
+          </div>
+          }
+        </div>
+
+        <!-- Departamento -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Departamento</label>
+          <select class="form-select" formControlName="department"
+            [ngClass]="{'is-invalid': cf['department'].invalid && (cf['department'].touched || submitted)}">
+
+            <option value="" disabled>Selecciona un departamento</option>
+
+            @for (dep of departments; track dep) {
+            <option [value]="dep">{{ dep }}</option>
+            }
+
+          </select>
+
+          @if (cf['department'].hasError('required')) {
+          <div class="invalid-feedback">
+            Debe seleccionar un departamento.
+          </div>
+          }
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Correo Electrónico</label>
+          <input type="email" formControlName="email" class="form-control" placeholder="correo@ejemplo.com"
+            [ngClass]="{'is-invalid': cf['email'].invalid && (cf['email'].touched || submitted)}" />
+
+          @if (cf['email'].hasError('required')) {
+          <div class="invalid-feedback">El correo es obligatorio.</div>
+          }
+          @if (cf['email'].hasError('email')) {
+          <div class="invalid-feedback">Formato de correo inválido.</div>
+          }
+        </div>
+
+        <!-- Teléfono y Fecha -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label fw-semibold">Teléfono</label>
+            <input type="text" formControlName="phone" class="form-control" placeholder="999888777"
+              [ngClass]="{'is-invalid': cf['phone'].invalid && (cf['phone'].touched || submitted)}" />
+
+            @if (cf['phone'].hasError('required')) {
+            <div class="invalid-feedback">El teléfono es obligatorio.</div>
+            }
+            @if (cf['phone'].hasError('pattern')) {
+            <div class="invalid-feedback">Debe contener exactamente 9 números.</div>
+            }
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label class="form-label fw-semibold">Fecha de Registro</label>
+            <input type="date" formControlName="fecha" class="form-control"
+              [ngClass]="{'is-invalid': cf['fecha'].invalid && (cf['fecha'].touched || submitted)}" />
+
+            @if (cf['fecha'].hasError('required')) {
+            <div class="invalid-feedback">La fecha es obligatoria.</div>
+            }
+            @if (cf['fecha'].hasError('futureDate')) {
+            <div class="invalid-feedback">No se permite una fecha futura.</div>
+            }
+          </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="d-flex justify-content-end gap-2 mt-4">
+          <button type="button" class="btn btn-outline-secondary px-4" (click)="cancelar()">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-primary px-4"
+
+          >
+            {{ id ? 'Actualizar' : 'Guardar' }}
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

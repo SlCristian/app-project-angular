@@ -1,0 +1,149 @@
+<p class="p-paragraph">Lista de clientes registrados</p>
+<hr>
+
+<div class="contenedor">
+<form class="form-contenedor" [formGroup]="formData">
+  <div class="content row div-contenedor">
+    <div class="col-sm-2">
+      <label for="client">Buscar cliente: </label>
+    </div>
+    <div class="col-sm-10">
+
+<div class="position-relative">
+  <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+  <input type="search" class="form-control ps-5" placeholder="Buscar..."  id="client"
+    name="client" formControlName="clientname">
+</div>
+
+    </div>
+
+
+  </div>
+
+  <div class="content row div-contenedor pt-5">
+    <div class="col-sm-2">
+      <label for="client">Buscar por departamento: </label>
+    </div>
+    <div class="col-sm-10">
+      <select class="form-select" aria-label="Default select example" formControlName="department">
+        <option value="" disabled selected>Selecciona un departamento</option>
+        @for(dep of departments; track dep){
+ <option [value]="dep">{{dep}} </option>
+        }
+
+      </select>
+    </div>
+
+<div class="row pt-3 g-3">
+  <div class="col-sm-4">
+    <button type="button" class="btn btn-primary w-100"
+    (click)="getfilterClient()"
+    >
+    <i class="bi bi-binoculars"></i>  Buscar</button>
+  </div>
+  <div class="col-sm-4">
+    <button type="button" class="btn btn-warning w-100"
+(click)="newElement()"
+    >
+      <i class="bi bi-person-add"></i>
+      Añadir</button>
+  </div>
+  <div class="col-sm-4">
+    <button type="button" class="btn btn-secondary w-100"
+    (click)="clear()"
+    >
+    <i class="bi bi-trash"></i> Limpiar</button>
+  </div>
+
+</div>
+
+
+
+  </div>
+</form>
+
+
+
+
+<table class="table table-striped">
+  <thead>
+
+    <tr>
+      <th scope="col"># </th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Email</th>
+      <th scope="col">Departamento</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for(dato of clientItemPage; track dato.id ){
+    <tr>
+      <!--Correlativo-->
+      <td>{{$index+1}}</td>
+      <td>{{dato.client}}</td>
+      <td>{{dato.email}}</td>
+      <td>{{dato.department}}</td>
+      <td>{{dato.phone}}</td>
+      <td>{{dato.fecha}}</td>
+
+      <td>
+        <button type="button" class="btn btn-success  me-2" (click)="modificar(dato)" title="Modificar elemento"><i
+            class="bi bi-pen"></i></button>
+        <button type="button" class="btn btn-danger  me-2" (click)="eliminar(dato.id!)" title="Eliminar"><i
+            class="bi bi-person-dash-fill"></i></button>
+        <button type="button" class="btn btn-info" (click)="view(dato,template)" title="Ver model"><i
+            class="bi bi-eye"></i></button>
+      </td>
+    </tr>
+    }
+  </tbody>
+  <tfoot>
+
+  </tfoot>
+
+</table>
+
+
+
+<div class="row">
+  <div class="col-xs-12 col-12">
+    <div class="content-wrapper">
+
+
+
+    </div>
+    <pagination [totalItems]="clients.length" (pageChanged)="pageChanged($event)" [itemsPerPage]="itemsPerPage">
+    </pagination>
+  </div>
+</div>
+
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">View Company</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p>{{ clientSelected?.client }}</p>
+        <p>{{ clientSelected?.email }}</p>
+        <p>{{ clientSelected?.department }}</p>
+        <p>{{ clientSelected?.phone }}</p>
+
+        <p>{{ clientSelected?.fecha }}</p>
+
+        <a href="#" class="btn btn-primary">Ver más...</a>
+      </div>
+    </div>
+  </div>
+</ng-template>

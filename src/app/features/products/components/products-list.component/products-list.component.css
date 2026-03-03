@@ -1,0 +1,26 @@
+/* Card efecto elegante */
+.product-card {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Botón flotante */
+.btn-add {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+}
+
+/* Input bonito */
+.form-control {
+  border-radius: 10px;
+}

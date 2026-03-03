@@ -1,0 +1,21 @@
+.p-paragraph{
+  text-align: center;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.form-contenedor{
+ display: flex;
+ flex-direction: column;
+ padding: 1.3rem;
+ border: #faf3dd solid 4px;
+ border-radius: 10px;
+}
+.div-contenedor{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
