@@ -1,141 +1,166 @@
 {
   "clients": [
     {
-      "client": "Juan Perez",
-      "department": "Lima",
-      "email": "juan@gmail.com",
-      "phone": "999888777",
-      "fecha": "2026-01-07",
-      "id": "c1"
-    },
-    {
-      "id": "c2",
-      "client": "Maria Lopez",
-      "department": "Lambayeque",
-      "email": "maria@gmail.com",
-      "phone": "987654321",
-      "active": true,
-      "fecha": "2026-03-01"
-    },
-    {
       "id": "c3",
-      "client": "Cristian Salazar",
-      "department": "Cusco",
-      "email": "carlos@gmail.com",
-      "phone": "912345678",
-      "active": false,
-      "fecha": "2026-02-15"
-    },
-    {
-      "id": "c4",
-      "client": "Ana Torres",
-      "department": "Lima",
-      "email": "ana@gmail.com",
-      "phone": "923456789",
-      "active": true,
-      "fecha": "2026-01-20"
-    },
-    {
-      "id": "c5",
-      "client": "Luis Mendoza",
-      "department": "Arequipa",
-      "email": "luis@gmail.com",
-      "phone": "934567890",
-      "active": false,
-      "fecha": "2026-02-28"
-    },
-    {
-      "id": "c6",
-      "client": "Fernanda Castillo",
+      "client": "Juan Perez",
       "department": "Piura",
-      "email": "fernanda@gmail.com",
-      "phone": "945678901",
+      "email": "juan.perez@gmail.com",
+      "phone": "912345678",
       "active": true,
       "fecha": "2026-03-02"
     },
     {
-      "id": "c7",
-      "client": "Diego Vargas",
-      "department": "Cusco",
-      "email": "diego@gmail.com",
-      "phone": "956789012",
+      "id": "c4",
+      "client": "Lucia Fernandez",
+      "department": "Arequipa",
+      "email": "lucia.fernandez@gmail.com",
+      "phone": "923456781",
       "active": true,
-      "fecha": "2026-01-10"
+      "fecha": "2026-03-02"
     },
     {
-      "id": "c8",
-      "client": "Valeria Soto",
-      "department": "Lambayeque",
-      "email": "valeria@gmail.com",
-      "phone": "967890123",
+      "id": "c5",
+      "client": "Carlos Ramirez",
+      "department": "Cusco",
+      "email": "carlos.ramirez@gmail.com",
+      "phone": "934567812",
       "active": false,
-      "fecha": "2026-02-05"
+      "fecha": "2026-03-03"
     },
     {
-      "id": "c9",
-      "client": "Ricardo Flores",
-      "department": "Tacna",
-      "email": "ricardo@gmail.com",
-      "phone": "978901234",
+      "id": "c6",
+      "client": "Andrea Torres",
+      "department": "La Libertad",
+      "email": "andrea.torres@gmail.com",
+      "phone": "945678123",
       "active": true,
       "fecha": "2026-03-03"
     },
     {
-      "id": "c10",
-      "client": "Sofia Herrera",
-      "department": "Arequipa",
-      "email": "sofia@gmail.com",
-      "phone": "989012345",
+      "id": "c7",
+      "client": "Miguel Castro",
+      "department": "Ica",
+      "email": "miguel.castro@gmail.com",
+      "phone": "956781234",
       "active": true,
-      "fecha": "2026-01-30"
+      "fecha": "2026-03-04"
     },
     {
-      "client": "Cristian",
-      "department": "Lima",
-      "email": "cristianronaldosalazarlopez@gmail.com",
-      "phone": "997267549",
-      "fecha": "2026-02-10",
-      "id": "6aPu9aQ"
+      "id": "c8",
+      "client": "Sofia Herrera",
+      "department": "Junin",
+      "email": "sofia.herrera@gmail.com",
+      "phone": "967812345",
+      "active": false,
+      "fecha": "2026-03-04"
     },
     {
-      "client": "Cristian",
-      "department": "Lima",
-      "email": "cristianronaldosalazarlopez@gmail.com",
-      "phone": "997267549",
-      "fecha": "2026-02-19",
-      "id": "Aj1LC5p"
+      "id": "c9",
+      "client": "Diego Morales",
+      "department": "Tacna",
+      "email": "diego.morales@gmail.com",
+      "phone": "978123456",
+      "active": true,
+      "fecha": "2026-03-04"
     },
     {
-      "client": "Cristian",
-      "department": "Lima",
-      "email": "cristianronaldosalazarlopez@gmail.com",
-      "phone": "997267549",
-      "fecha": "2026-03-02",
-      "id": "LgN59h1"
+      "id": "c10",
+      "client": "Valeria Rojas",
+      "department": "Loreto",
+      "email": "valeria.rojas@gmail.com",
+      "phone": "989234567",
+      "active": true,
+      "fecha": "2026-03-04"
     },
     {
-      "client": "Cristian",
-      "department": "Lima",
-      "email": "cristianronaldosalazarlopez@gmail.com",
-      "phone": "997267549",
-      "fecha": "2026-03-01",
-      "id": "Yh-zxQe"
+      "id": "c11",
+      "client": "Fernando Aguilar",
+      "department": "Huancavelica",
+      "email": "fernando.aguilar@gmail.com",
+      "phone": "901112233",
+      "active": true,
+      "fecha": "2026-03-05"
     },
     {
-      "client": "Cristian",
-      "department": "Lima",
-      "email": "cristianronaldosalazarlopez@gmail.com",
-      "phone": "997267549",
-      "fecha": "2026-03-01",
-      "id": "RLnbbHZ"
+      "id": "c12",
+      "client": "Paola Mendoza",
+      "department": "Cajamarca",
+      "email": "paola.mendoza@gmail.com",
+      "phone": "902223344",
+      "active": true,
+      "fecha": "2026-03-05"
     },
     {
-      "client": "Cristian",
-      "department": "Lima",
-      "email": "cristianronaldosalazarlopez@gmail.com",
-      "phone": "997267549",
-      "fecha": "2026-03-01",
-      "id": "1i8VltB"
+      "id": "c13",
+      "client": "Ricardo Salas",
+      "department": "Puno",
+      "email": "ricardo.salas@gmail.com",
+      "phone": "903334455",
+      "active": false,
+      "fecha": "2026-03-06"
+    },
+    {
+      "id": "c14",
+      "client": "Daniela Cruz",
+      "department": "Moquegua",
+      "email": "daniela.cruz@gmail.com",
+      "phone": "904445566",
+      "active": true,
+      "fecha": "2026-03-06"
+    },
+    {
+      "id": "c15",
+      "client": "Jorge Navarro",
+      "department": "Ayacucho",
+      "email": "jorge.navarro@gmail.com",
+      "phone": "905556677",
+      "active": true,
+      "fecha": "2026-03-07"
+    },
+    {
+      "id": "c16",
+      "client": "Camila Espinoza",
+      "department": "Tumbes",
+      "email": "camila.espinoza@gmail.com",
+      "phone": "906667788",
+      "active": false,
+      "fecha": "2026-03-07"
+    },
+    {
+      "id": "c17",
+      "client": "Alonso Vega",
+      "department": "Apurimac",
+      "email": "alonso.vega@gmail.com",
+      "phone": "907778899",
+      "active": true,
+      "fecha": "2026-03-08"
+    },
+    {
+      "id": "c18",
+      "client": "Gabriela Flores",
+      "department": "Ucayali",
+      "email": "gabriela.flores@gmail.com",
+      "phone": "908889900",
+      "active": true,
+      "fecha": "2026-03-08"
+    },
+    {
+      "id": "c19",
+      "client": "Luis Chavez",
+      "department": "San Martin",
+      "email": "luis.chavez@gmail.com",
+      "phone": "909990011",
+      "active": true,
+      "fecha": "2026-03-09"
+    },
+    {
+      "id": "c20",
+      "client": "Mariana Silva",
+      "department": "Amazonas",
+      "email": "mariana.silva@gmail.com",
+      "phone": "910101112",
+      "active": false,
+      "fecha": "2026-03-09"
     }
   ],
   "products": [
@@ -148,73 +173,171 @@
     },
     {
       "id": "p2",
-      "product": "Laptop Lenovo",
-      "price": 3200,
-      "stock": 8,
-      "active": true
-    },
-    {
-      "id": "p3",
       "product": "Mouse Logitech",
-      "price": 80,
+      "price": 120,
       "stock": 50,
       "active": true
     },
     {
-      "id": "p4",
+      "id": "p3",
       "product": "Teclado Mecánico Redragon",
       "price": 250,
+      "stock": 35,
+      "active": true
+    },
+    {
+      "id": "p4",
+      "product": "Monitor Samsung 24\"",
+      "price": 850,
       "stock": 20,
       "active": true
     },
     {
       "id": "p5",
-      "product": "Monitor Samsung 24\"",
-      "price": 950,
+      "product": "Impresora Epson",
+      "price": 650,
       "stock": 15,
       "active": true
     },
     {
       "id": "p6",
-      "product": "Impresora Epson",
-      "price": 650,
-      "stock": 5,
-      "active": true
-    },
-    {
-      "id": "p7",
       "product": "Disco SSD 1TB",
       "price": 400,
-      "stock": 12,
-      "active": true
-    },
-    {
-      "id": "p8",
-      "product": "Memoria RAM 16GB",
-      "price": 300,
-      "stock": 18,
-      "active": true
-    },
-    {
-      "id": "p9",
-      "product": "Tablet Samsung",
-      "price": 1200,
-      "stock": 7,
-      "active": false
-    },
-    {
-      "id": "p10",
-      "product": "Router TP-Link",
-      "price": 180,
       "stock": 25,
       "active": true
     },
     {
-      "product": "Chavito",
-      "price": 12.4,
+      "id": "p7",
+      "product": "Memoria RAM 16GB",
+      "price": 300,
+      "stock": 40,
+      "active": true
+    },
+    {
+      "id": "p8",
+      "product": "Tablet Lenovo",
+      "price": 1200,
+      "stock": 12,
+      "active": false
+    },
+    {
+      "id": "p9",
+      "product": "Audífonos Bluetooth",
+      "price": 180,
+      "stock": 60,
+      "active": true
+    },
+    {
+      "id": "p10",
+      "product": "Silla Gamer",
+      "price": 950,
+      "stock": 8,
+      "active": true
+    },
+    {
+      "id": "p11",
+      "product": "Webcam HD",
+      "price": 220,
+      "stock": 30,
+      "active": true
+    },
+    {
+      "id": "p12",
+      "product": "Laptop Lenovo ThinkPad",
+      "price": 4200,
+      "stock": 7,
+      "active": true
+    },
+    {
+      "id": "p13",
+      "product": "Laptop ASUS VivoBook",
+      "price": 3100,
+      "stock": 9,
+      "active": true
+    },
+    {
+      "id": "p14",
+      "product": "Smartphone Samsung Galaxy",
+      "price": 2800,
+      "stock": 18,
+      "active": true
+    },
+    {
+      "id": "p15",
+      "product": "iPad 10th Gen",
+      "price": 2600,
+      "stock": 6,
+      "active": true
+    },
+    {
+      "id": "p16",
+      "product": "Router TP-Link AC1200",
+      "price": 180,
+      "stock": 45,
+      "active": true
+    },
+    {
+      "id": "p17",
+      "product": "Switch 8 Puertos",
+      "price": 140,
+      "stock": 38,
+      "active": true
+    },
+    {
+      "id": "p18",
+      "product": "Disco Duro Externo 2TB",
+      "price": 520,
+      "stock": 22,
+      "active": true
+    },
+    {
+      "id": "p19",
+      "product": "UPS 1200VA",
+      "price": 750,
+      "stock": 11,
+      "active": true
+    },
+    {
+      "id": "p20",
+      "product": "Proyector Epson XGA",
+      "price": 1900,
+      "stock": 5,
+      "active": false
+    },
+    {
+      "id": "p21",
+      "product": "Microfono Condensador",
+      "price": 340,
+      "stock": 27,
+      "active": true
+    },
+    {
+      "id": "p22",
+      "product": "Laptop Gamer MSI",
+      "price": 6500,
       "stock": 4,
-      "active": true,
-      "id": "-pxu97e"
+      "active": true
+    },
+    {
+      "id": "p23",
+      "product": "Monitor LG 27\"",
+      "price": 1200,
+      "stock": 14,
+      "active": true
+    },
+    {
+      "id": "p24",
+      "product": "Teclado Inalambrico Logitech",
+      "price": 210,
+      "stock": 33,
+      "active": true
+    },
+    {
+      "id": "p25",
+      "product": "Mouse Gamer RGB",
+      "price": 160,
+      "stock": 41,
+      "active": true
     }
   ],
   "employees": [
@@ -226,97 +349,118 @@
   ],
   "sales": [
     {
-      "id": "s1",
-      "clientId": "c1",
+      "id": "s10",
+      "clientId": "c3",
       "employeeId": "e1",
-      "fecha": "2026-01-07",
+      "fecha": "2026-03-01",
       "items": [
         {
           "productId": "p1",
-          "quantity": 2,
+          "quantity": 1,
           "price": 3500,
-          "subtotal": 7000
+          "subtotal": 3500
+        },
+        {
+          "productId": "p2",
+          "quantity": 2,
+          "price": 120,
+          "subtotal": 240
         }
       ],
-      "total": 7000
+      "total": 3740
     },
     {
-      "id": "s2",
-      "clientId": "c2",
+      "id": "s11",
+      "clientId": "c4",
       "employeeId": "e1",
-      "fecha": "2026-02-01",
+      "fecha": "2026-03-01",
       "items": [
-        {
-          "productId": "p3",
-          "quantity": 3,
-          "price": 80,
-          "subtotal": 240
-        },
         {
           "productId": "p4",
           "quantity": 1,
-          "price": 250,
-          "subtotal": 250
-        }
-      ],
-      "total": 490
-    },
-    {
-      "id": "s3",
-      "clientId": "c4",
-      "employeeId": "e1",
-      "fecha": "2026-02-10",
-      "items": [
-        {
-          "productId": "p5",
-          "quantity": 2,
-          "price": 950,
-          "subtotal": 1900
-        }
-      ],
-      "total": 1900
-    },
-    {
-      "id": "s4",
-      "clientId": "c7",
-      "employeeId": "e1",
-      "fecha": "2026-02-15",
-      "items": [
-        {
-          "productId": "p2",
-          "quantity": 1,
-          "price": 3200,
-          "subtotal": 3200
+          "price": 850,
+          "subtotal": 850
         },
         {
-          "productId": "p8",
-          "quantity": 2,
-          "price": 300,
-          "subtotal": 600
+          "productId": "p9",
+          "quantity": 3,
+          "price": 180,
+          "subtotal": 540
         }
       ],
-      "total": 3800
+      "total": 1390
     },
     {
-      "id": "s6",
-      "clientId": "c10",
+      "id": "s12",
+      "clientId": "c6",
+      "employeeId": "e1",
+      "fecha": "2026-03-01",
+      "items": [
+        {
+          "productId": "p6",
+          "quantity": 2,
+          "price": 400,
+          "subtotal": 800
+        }
+      ],
+      "total": 800
+    },
+    {
+      "id": "s13",
+      "clientId": "c7",
       "employeeId": "e1",
       "fecha": "2026-03-02",
       "items": [
         {
-          "productId": "p7",
+          "productId": "p22",
           "quantity": 1,
-          "price": 400,
-          "subtotal": 400
-        },
-        {
-          "productId": "-pxu97e",
-          "quantity": 2,
-          "price": 12.4,
-          "subtotal": 24.8
+          "price": 6500,
+          "subtotal": 6500
         }
       ],
-      "total": 424.8
+      "total": 6500
+    },
+    {
+      "id": "s14",
+      "clientId": "c9",
+      "employeeId": "e1",
+      "fecha": "2026-03-02",
+      "items": [
+        {
+          "productId": "p10",
+          "quantity": 1,
+          "price": 950,
+          "subtotal": 950
+        },
+        {
+          "productId": "p11",
+          "quantity": 2,
+          "price": 220,
+          "subtotal": 440
+        }
+      ],
+      "total": 1390
+    },
+    {
+      "id": "s15",
+      "clientId": "c12",
+      "employeeId": "e1",
+      "fecha": "2026-03-02",
+      "items": [
+        {
+          "productId": "p14",
+          "quantity": 1,
+          "price": 2800,
+          "subtotal": 2800
+        },
+        {
+          "productId": "p3",
+          "quantity": 2,
+          "price": 250,
+          "subtotal": 500
+        }
+      ],
+      "total": 3300
     }
   ]
 }

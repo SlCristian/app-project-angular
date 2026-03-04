@@ -1,0 +1,35 @@
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+  background-color: #111827;
+  /* mismo tono que header y sidebar */
+
+  text-align: center;
+
+  /* Línea neon superior */
+  border-top: 1px solid #00ff88;
+
+  box-shadow: 0 -2px 10px rgba(0, 255, 136, 0.2);
+}
+
+footer small {
+
+  color: #ffffff;
+  /* gris elegante */
+  font-size: 16px;
+  letter-spacing: 0.6px;
+}
+
+/* Si quieres que la fecha tenga efecto neon */
+footer small span {
+  color: #00ff88;
+}
+footer small {
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+}
+footer:hover {
+  box-shadow: 0 -4px 20px rgba(0, 255, 136, 0.4);
+  transition: 0.3s ease;
+}

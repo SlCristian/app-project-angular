@@ -1,0 +1,108 @@
+/* ============================= */
+/* CONTENEDOR GENERAL */
+/* ============================= */
+
+.container {
+  margin-top: 40px;
+}
+
+/* ============================= */
+/* CARD PRINCIPAL */
+/* ============================= */
+
+.card {
+  background-color: #1f2937 !important;
+  /* oscuro */
+  border: 1px solid #00ff88;
+  border-radius: 20px !important;
+
+  box-shadow:
+    0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* ============================= */
+/* TITULO */
+/* ============================= */
+
+.card h3 {
+  color: #00ff88 !important;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+}
+
+/* ============================= */
+/* LABELS */
+/* ============================= */
+
+.form-label {
+  color: #e5e7eb;
+}
+
+/* ============================= */
+/* INPUTS */
+/* ============================= */
+
+.form-control,
+.form-select {
+  background-color: #111827;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  color: #ffffff;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+/* FOCUS NEON */
+.form-control:focus,
+.form-select:focus {
+  background-color: #111827;
+  color: #ffffff;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+}
+
+/* ============================= */
+/* VALIDACIONES */
+/* ============================= */
+
+.is-invalid {
+  border-color: #ff4d4d !important;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
+}
+
+.invalid-feedback {
+  color: #ff6b6b;
+}
+
+/* ============================= */
+/* BOTONES */
+/* ============================= */
+
+/* Cancelar */
+.btn-outline-secondary {
+  border: 1px solid #9ca3af;
+  color: #9ca3af;
+  background: transparent;
+  transition: 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background: #9ca3af;
+  color: black;
+}
+
+/* Guardar / Actualizar */
+.btn-primary {
+  background: transparent;
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #00ff88;
+  color: black;
+  box-shadow: 0 0 15px #00ff88;
+}

@@ -135,19 +135,19 @@ if(this.id){
   next:(res)=>{
     this.product=res;
 
-   this.toastr.info("La compñia fue modificada","Info")
+   this.toastr.info("El producto fue modificada","Info")
 this.route.navigate(["home/product/list"])
   },
   error:(err)=>{
-  this.toastr.error("Error al registrar la compañia","Error");
+  this.toastr.error("Error al registrar el producto","Error");
   }
 })
      }else{
 this.productService.save(productRequest).subscribe({
   next:(res)=>{
     this.product=res;
-   
-    this.toastr.success("La compañia ha sido agregada");
+
+    this.toastr.success("El producto ha sido agregada");
    this.route.navigate(["home/product/list"])
   }
 })

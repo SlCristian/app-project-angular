@@ -1,26 +1,112 @@
-/* Card efecto elegante */
+h4 {
+  color: #00ff88 !important;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+}
+.form-control {
+  background-color: #111827;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  color: white;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+.form-control:focus {
+  background-color: #111827;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+  color: white;
+}
+
+.bi-search {
+  color: #00ff88 !important;
+}
+.btn-success {
+  background: transparent;
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  transition: 0.3s ease;
+}
+
+.btn-success:hover {
+  background: #00ff88;
+  color: black;
+  box-shadow: 0 0 15px #00ff88;
+}
 .product-card {
-  border: none;
-  border-radius: 15px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: #1f2937;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 255, 136, 0.3);
   transition: all 0.3s ease;
+
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.15);
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.4);
+  border: 1px solid #00ff88;
+}
+.card-title {
+
+  color: #00ff88 !important;
+  font-weight: bold;
 }
 
-/* Botón flotante */
+.card-text {
+  color: #d1d5db !important;
+}
+.pagination{
+  margin-top: 2rem;
+
+}
+.price-label {
+  color: #00ff88;
+}
+.btn-outline-primary {
+  border: 1px solid #00bfff;
+  color: #00bfff;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: #00bfff;
+  color: black;
+  box-shadow: 0 0 10px #00bfff;
+}
+
+.btn-outline-danger {
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+  background: transparent;
+}
+
+.btn-outline-danger:hover {
+  background: #ff4d4d;
+  color: black;
+  box-shadow: 0 0 10px #ff4d4d;
+}
 .btn-add {
   position: fixed;
   bottom: 80px;
   right: 40px;
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #00ff88;
+  color: black;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+  transition: 0.3s ease;
   z-index: 1000;
 }
 
-/* Input bonito */
-.form-control {
-  border-radius: 10px;
+.btn-add:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00ff88;
 }

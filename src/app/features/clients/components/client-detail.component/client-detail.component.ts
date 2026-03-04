@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ClientService } from '../../service/client.service';
 import { ToastrService } from 'ngx-toastr';
 import { Client } from '../../model/client';
+import { phoneValidator } from '../../validations/phone.validations';
 
 @Component({
   selector: 'app-client-detail.component',
@@ -81,13 +82,14 @@ clientForm = this.formBuilder.group({
 
     [
       Validators.required,
-      Validators.pattern(/^[0-9]{9}$/)
+      Validators.pattern(/^[0-9]{9}$/),phoneValidator
+
     ]
     ],
       fecha:["2024-11-01",
 
     [
-      Validators.required
+      Validators.required,
     ]
     ],
 
@@ -113,7 +115,7 @@ this.clientServie.findById(id).subscribe({
 
 onSubmit(){
   this.submitted=true;
-  
+
 const client=this.clientForm.controls["client"].value?? ""
 const department=this.clientForm.controls["department"].value??""
 const email=this.clientForm.controls["email"].value??""
@@ -139,11 +141,11 @@ if(this.id){
   next:(res)=>{
     this.client=res;
 
-   this.toastr.info("La compñia fue modificada","Info")
+   this.toastr.info("El cliente fue modificada","Info")
 this.route.navigate(["home/client/list"])
   },
   error:(err)=>{
-  this.toastr.error("Error al registrar la compañia","Error");
+  this.toastr.error("Error al registrar el cliente","Error");
   }
 })
      }else{
@@ -151,7 +153,7 @@ this.clientServie.save(clientRequest).subscribe({
   next:(res)=>{
     this.client=res;
 
-    this.toastr.success("La compañia ha sido agregada");
+    this.toastr.success("El cliente ha sido agregada");
    this.route.navigate(["home/client/list"])
   }
 })

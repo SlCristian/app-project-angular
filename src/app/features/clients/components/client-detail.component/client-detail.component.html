@@ -34,7 +34,7 @@
           }
         </div>
 
-     
+
         <div class="mb-3">
           <label class="form-label fw-semibold">Departamento</label>
           <select class="form-select" formControlName="department"
@@ -82,6 +82,11 @@
             @if (cf['phone'].hasError('pattern')) {
             <div class="invalid-feedback">Debe contener exactamente 9 números.</div>
             }
+
+           @if (cf['phone'].hasError('InvalidPhone')) {
+            <div class="invalid-feedback">El numero debe empezar con el numero 9</div>
+            }
+
           </div>
 
           <div class="col-md-6 mb-3">
