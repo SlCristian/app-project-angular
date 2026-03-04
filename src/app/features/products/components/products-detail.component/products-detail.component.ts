@@ -42,7 +42,7 @@ ngOnInit(): void {
   }
 
   private route=inject(Router);
-  //para leer los parametros de los id//
+
   private activerouter=inject(ActivatedRoute);
 private formBuilder=inject(FormBuilder);
 private productService= inject(ProductService);
@@ -109,7 +109,7 @@ this.productService.findById(id).subscribe({
 
 onSubmit(){
   this.submitted=true;
-  //quiero el valor uu
+
 const product=this.productForm.controls["product"].value?? ""
 const price=Number(this.productForm.controls["price"].value)??0
 const stock=Number(this.productForm.controls["stock"].value)??0
@@ -134,7 +134,7 @@ if(this.id){
    this.productService.update(this.id,productRequest).subscribe({
   next:(res)=>{
     this.product=res;
-    //console.log(this.product)
+
    this.toastr.info("La compñia fue modificada","Info")
 this.route.navigate(["home/product/list"])
   },
@@ -146,7 +146,7 @@ this.route.navigate(["home/product/list"])
 this.productService.save(productRequest).subscribe({
   next:(res)=>{
     this.product=res;
-    console.log(this.product)
+   
     this.toastr.success("La compañia ha sido agregada");
    this.route.navigate(["home/product/list"])
   }
@@ -157,7 +157,7 @@ this.productService.save(productRequest).subscribe({
 }
 
 get cf(): {[key:string]:AbstractControl}{
-  //console.log(this.productForm.controls)
+
   return this.productForm.controls
 }
 

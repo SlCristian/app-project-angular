@@ -77,7 +77,7 @@ filteredSales: SaleView[] = [];
 
 
   private buildSaleView(): void {
-console.log("sadsaddsa")
+
     this.salesViewList = this.sales.map(sale => {
 
       const client = this.clients.find(c => c.id === sale.clientId);
@@ -121,7 +121,7 @@ console.log("sadsaddsa")
     );
 
     this.saleItemPage = this.filteredSales.slice(0, this.itemsPerPage);
-    console.log(this.saleItemPage)
+
   }
 
 
@@ -145,7 +145,7 @@ console.log("sadsaddsa")
             icon: 'success',
           });
 
-          this.loadData(); // recargar lista
+          this.loadData();
         });
       }
     });
@@ -155,9 +155,7 @@ console.log("sadsaddsa")
 
     const startItem = (event.page - 1) * event.itemsPerPage;
     const endItem = event.page * event.itemsPerPage;
-console.log(this.saleItemPage)
-console.log("Awawa:" + startItem)
-console.log(endItem)
+
     this.saleItemPage = this.salesViewList.slice(startItem, endItem);
   }
 

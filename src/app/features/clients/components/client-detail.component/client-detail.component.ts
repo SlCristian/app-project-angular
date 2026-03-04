@@ -43,7 +43,7 @@ ngOnInit(): void {
   }
 
   private route=inject(Router);
-  //para leer los parametros de los id//
+
   private activerouter=inject(ActivatedRoute);
 private formBuilder=inject(FormBuilder);
 private clientServie= inject(ClientService);
@@ -56,7 +56,7 @@ clientForm = this.formBuilder.group({
 
     client:[
       "Cristian",
-      //Validacion aca uu
+
       [
       Validators.required,
       Validators.minLength(3),
@@ -113,7 +113,7 @@ this.clientServie.findById(id).subscribe({
 
 onSubmit(){
   this.submitted=true;
-  //quiero el valor uu
+  
 const client=this.clientForm.controls["client"].value?? ""
 const department=this.clientForm.controls["department"].value??""
 const email=this.clientForm.controls["email"].value??""
@@ -133,12 +133,12 @@ const clientRequest:Client={
    phone,
    fecha
 }
-console.log(clientRequest)
+
 if(this.id){
    this.clientServie.update(this.id,clientRequest).subscribe({
   next:(res)=>{
     this.client=res;
-    //console.log(this.client)
+
    this.toastr.info("La compñia fue modificada","Info")
 this.route.navigate(["home/client/list"])
   },
@@ -150,7 +150,7 @@ this.route.navigate(["home/client/list"])
 this.clientServie.save(clientRequest).subscribe({
   next:(res)=>{
     this.client=res;
-    console.log(this.client)
+
     this.toastr.success("La compañia ha sido agregada");
    this.route.navigate(["home/client/list"])
   }
@@ -160,36 +160,10 @@ this.clientServie.save(clientRequest).subscribe({
 
 }
 
-/*es un get, o sea una propiedad y se usa en typescript
-retorna el obeto que contiene todo slo scontroles del formlario reactivo
-{ [key: string]: AbstractControl } : "Un objeto cuyas claves son string y cuyos valores son AbstractControl" las claves recuerda que no solo pueden se string pero lo normal si xddd
-*/
+
 get cf(): {[key:string]:AbstractControl}{
-  //console.log(this.clientForm.controls)
+
   return this.clientForm.controls
 }
-/* esto : tghis.clientForm.controles retorna algo como :{
-  name: FormControl,
-  country: FormControl
 
-}
-👉 Un objeto
-👉 Donde cada propiedad es un FormControl
-👉 No devuelve valores
-👉 No devuelve errores
-👉 Devuelve controles
-
-para que quede claro:
-this.clientForm.controls no devuelve : { name: "Cristian", country: "Perú" }
-eso devuelve: this.clientForm.value
-
-ENTONCES CUANDO LO HACE USO LOS CONTORLS
-cf['country'].invalid
-1️⃣ cf → retorna clientForm.controls
-2️⃣ cf['country'] → devuelve el FormControl del country
-3️⃣ .invalid → es una propiedad del AbstractControl
-
-
-
-*/
 }

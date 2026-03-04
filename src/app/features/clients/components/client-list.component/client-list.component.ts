@@ -47,11 +47,11 @@ ngOnInit(){
 
 
 newElement() {
-    //le pasas la ruta para donde dirigirte//
-    this.router.navigate(['home/client/detail']); /*DATO: SI SE LE PONE PRIMERO EL  ESTAS DICIEDO QUE ES UNA RUTA RELATIVA EN ESTE CASOE MPIEZA DESDE HOME, O SEA NO RUTA RELATIBVA EXACTAMENTE SINO, QUE LA RAIZ DE ACA ES HOME POR ESO NO VA  */
+
+    this.router.navigate(['home/client/detail']);
   }
   modificar(client: Client) {
-    console.log(client.id)
+
     this.router.navigate(['home/client/detail', client.id]);
   }
   eliminar(id: string): void {
@@ -128,7 +128,7 @@ this.clientItemPage=[]
  pageChanged(event: PageChangedEvent): void {
     const startItem = (event.page - 1) * event.itemsPerPage;
     const endItem = event.page * event.itemsPerPage;
-    //this.returnedArray = this.contentArray.slice(startItem, endItem);
+  
     this.clientItemPage=this.clients.slice(startItem,endItem);
   }
  view(client:Client,template: TemplateRef<void>) {

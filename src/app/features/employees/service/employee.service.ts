@@ -35,13 +35,13 @@ findById(id:string):Observable<Employee>{
 }
 
 save(Employee:Employee):Observable<Employee>{
-  console.log(JSON.stringify(Employee))
+
 
   return this.httpClient.post<Employee>(this.urlBase,Employee);
 }
 
 update(id:string,Employee:Employee):Observable<Employee>{
-  console.log(JSON.stringify(Employee))
+
 
   return this.httpClient.put<Employee>(`${this.urlBase}/${id}`,Employee);
 }

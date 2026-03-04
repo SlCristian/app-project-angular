@@ -23,13 +23,13 @@ findById(id:string):Observable<Sale>{
 }
 
 save(Sale:Sale):Observable<Sale>{
-  console.log(JSON.stringify(Sale))
+
 
   return this.httpClient.post<Sale>(this.urlBase,Sale);
 }
 
 update(id:string,Sale:Sale):Observable<Sale>{
-  console.log(JSON.stringify(Sale))
+ 
 
   return this.httpClient.put<Sale>(`${this.urlBase}/${id}`,Sale);
 }

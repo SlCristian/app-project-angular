@@ -39,7 +39,7 @@ newElement() {
     this.router.navigate(['home/product/detail']);
   }
  modificar(product: Product) {
-console.log(product.id)
+
    this.router.navigate(['home/product/detail',product.id]);
   }
   eliminar(id: string): void {
@@ -90,7 +90,7 @@ getfilterProduct(): void {
 
         this.products = res;
         this.productItemPage=this.products.slice(0,this.itemsPerPage)
-        console.log(this.productItemPage)
+    
         this.formData.get("product")?.setValue("");
 
       },
@@ -109,7 +109,7 @@ this.productItemPage=[]
     const endItem = event.page * event.itemsPerPage;
 
     this.productItemPage=this.products.slice(startItem,endItem);
-    console.log(this.productItemPage)
+
   }
 
 

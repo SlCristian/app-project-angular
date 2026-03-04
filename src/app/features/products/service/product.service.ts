@@ -39,13 +39,13 @@ findById(id:string):Observable<Product>{
 }
 
 save(Product:Product):Observable<Product>{
-  console.log(JSON.stringify(Product))
+
 
   return this.httpClient.post<Product>(this.urlBase,Product);
 }
 
 update(id:string,Product:Product):Observable<Product>{
-  console.log(JSON.stringify(Product))
+
 
   return this.httpClient.put<Product>(`${this.urlBase}/${id}`,Product);
 }

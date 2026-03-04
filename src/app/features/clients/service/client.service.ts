@@ -34,15 +34,15 @@ findById(id:string):Observable<Client>{
 
   return this.httpClient.get<Client>(`${this.urlBase}/${id}`);
 }
-/*SESION 04 */
+
 save(Client:Client):Observable<Client>{
-  console.log(JSON.stringify(Client))
+
 
   return this.httpClient.post<Client>(this.urlBase,Client);
 }
 
 update(id:string,Client:Client):Observable<Client>{
-  console.log(JSON.stringify(Client))
+ 
 
   return this.httpClient.put<Client>(`${this.urlBase}/${id}`,Client);
 }
