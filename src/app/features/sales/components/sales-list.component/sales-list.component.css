@@ -85,13 +85,13 @@ label {
   color: #e5e7eb;
 }
 
-/* Forzar fondo oscuro en celdas */
+
 .table> :not(caption)>*>* {
   background-color: #1f2937 !important;
   color: #e5e7eb !important;
 }
 
-/* Quitar striped blanco */
+
 .table-striped>tbody>tr:nth-of-type(odd)>* {
   background-color: #1f2937 !important;
 }
@@ -108,7 +108,7 @@ label {
   letter-spacing: 1px;
 }
 
-/* Hover elegante */
+
 .table tbody tr:hover>* {
   background-color: rgba(0, 255, 136, 0.08) !important;
 }

@@ -1,14 +1,9 @@
-/* ============================= */
-/* CONTENEDOR GENERAL */
-/* ============================= */
 
 .container {
   margin-top: 40px;
 }
 
-/* ============================= */
-/* CARD PRINCIPAL */
-/* ============================= */
+
 
 .card {
   background-color: #1f2937 !important;
@@ -20,26 +15,19 @@
     0 0 10px rgba(0, 255, 136, 0.3);
 }
 
-/* ============================= */
-/* TITULO */
-/* ============================= */
+
 
 .card h3 {
   color: #00ff88 !important;
   text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
 }
 
-/* ============================= */
-/* LABELS */
-/* ============================= */
+
 
 .form-label {
   color: #e5e7eb;
 }
 
-/* ============================= */
-/* INPUTS */
-/* ============================= */
 
 .form-control,
 .form-select {
@@ -54,7 +42,7 @@
   color: #9ca3af;
 }
 
-/* FOCUS NEON */
+
 .form-control:focus,
 .form-select:focus {
   background-color: #111827;
@@ -63,9 +51,7 @@
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
 }
 
-/* ============================= */
-/* VALIDACIONES */
-/* ============================= */
+
 
 .is-invalid {
   border-color: #ff4d4d !important;
@@ -76,11 +62,6 @@
   color: #ff6b6b;
 }
 
-/* ============================= */
-/* BOTONES */
-/* ============================= */
-
-/* Cancelar */
 .btn-outline-secondary {
   border: 1px solid #9ca3af;
   color: #9ca3af;
@@ -93,7 +74,7 @@
   color: black;
 }
 
-/* Guardar / Actualizar */
+
 .btn-primary {
   background: transparent;
   border: 1px solid #00ff88;
