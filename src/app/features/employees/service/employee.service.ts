@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class EmployeeService {
 
 private httpClient=inject(HttpClient);
-  urlBase="http://localhost:3000/Employees"
+  urlBase="http://localhost:1234/employees"
 
 getAll():Observable<Employee[]>{
   return this.httpClient.get<Employee[]>(this.urlBase);

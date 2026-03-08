@@ -90,7 +90,7 @@ getfilterProduct(): void {
 
         this.products = res;
         this.productItemPage=this.products.slice(0,this.itemsPerPage)
-    
+
         this.formData.get("product")?.setValue("");
 
       },

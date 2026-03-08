@@ -9,7 +9,7 @@ import { Sale } from '../model/sale';
 export class SalesService {
 
 private httpClient=inject(HttpClient);
-  urlBase="http://localhost:3000/sales"
+  urlBase="http://localhost:1234/sales"
 
 getAll():Observable<Sale[]>{
   return this.httpClient.get<Sale[]>(this.urlBase);
@@ -29,7 +29,7 @@ save(Sale:Sale):Observable<Sale>{
 }
 
 update(id:string,Sale:Sale):Observable<Sale>{
- 
+
 
   return this.httpClient.put<Sale>(`${this.urlBase}/${id}`,Sale);
 }

@@ -69,7 +69,7 @@ newElement() {
           this.clientServices.delete(id).subscribe({
             next: (res) => {
 
-
+        this.getAll();
               Swal.fire({
                 title: 'Deleted!',
                 text: 'Your file has been deleted.',
@@ -128,7 +128,7 @@ this.clientItemPage=[]
  pageChanged(event: PageChangedEvent): void {
     const startItem = (event.page - 1) * event.itemsPerPage;
     const endItem = event.page * event.itemsPerPage;
-  
+
     this.clientItemPage=this.clients.slice(startItem,endItem);
   }
  view(client:Client,template: TemplateRef<void>) {

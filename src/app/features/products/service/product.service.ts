@@ -13,7 +13,7 @@ export class ProductService {
 
 
 private httpClient=inject(HttpClient);
-  urlBase="http://localhost:3000/products"
+  urlBase="http://localhost:1234/products"
 
 getAll():Observable<Product[]>{
   return this.httpClient.get<Product[]>(this.urlBase);
@@ -24,7 +24,7 @@ filterByProduct(name: string): Observable<Product[]> {
   let params = new HttpParams();
 
   if (name) {
-    params = params.set('product_like', name);
+    params = params.set('product', name);
   }
 
 

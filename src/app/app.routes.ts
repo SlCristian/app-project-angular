@@ -1,8 +1,8 @@
-import { FEATURES_ROUTES } from './features/routes/features.routes';
+
 
 import { Routes } from '@angular/router';
 import { PageNotFoundComponent } from './core/error/page-not-found/page-not-found.component';
-import { LoginComponent } from './core/auth/login/login.component';
+
 
 export const routes: Routes = [
   {

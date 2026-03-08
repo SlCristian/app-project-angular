@@ -8,7 +8,7 @@ import { Client } from '../model/client';
 })
 export class ClientService {
   private httpClient=inject(HttpClient);
-  urlBase="http://localhost:3000/clients"
+  urlBase="http://localhost:1234/clients"
 
 getAll():Observable<Client[]>{
   return this.httpClient.get<Client[]>(this.urlBase);
@@ -19,16 +19,15 @@ filterByClient(name: string, department: string): Observable<Client[]> {
   let params = new HttpParams();
 
   if (name) {
-    params = params.set('client_like', name);
+    params = params.set('client', name);
   }
 
   if (department) {
-    params = params.set('department_like', department);
+    params = params.set('department', department);
   }
 
   return this.httpClient.get<Client[]>(this.urlBase, { params });
 }
-
 
 findById(id:string):Observable<Client>{
 
@@ -42,7 +41,7 @@ save(Client:Client):Observable<Client>{
 }
 
 update(id:string,Client:Client):Observable<Client>{
- 
+
 
   return this.httpClient.put<Client>(`${this.urlBase}/${id}`,Client);
 }
